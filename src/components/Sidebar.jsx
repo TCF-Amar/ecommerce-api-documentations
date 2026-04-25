@@ -12,7 +12,7 @@ export default function Sidebar({ activeId, onNav }) {
 
       <div className={styles.baseUrl}>
         <span className={styles.dot} />
-        <span>localhost:5000/api/v1</span>
+        <span>https://backent-ecommerce-production.up.railway.app/api/v1</span>
       </div>
 
       <nav className={styles.nav}>
