@@ -35,6 +35,23 @@ export default function App() {
 
   return (
     <div className={styles.app}>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "ShopAPI E-commerce REST API Documentation",
+          "description": "Comprehensive documentation for ShopAPI, a production-grade e-commerce backend API.",
+          "author": {
+            "@type": "Organization",
+            "name": "ShopAPI Team"
+          },
+          "about": [
+            { "@type": "Thing", "name": "Authentication" },
+            { "@type": "Thing", "name": "Product Management" },
+            { "@type": "Thing", "name": "Order Processing" }
+          ]
+        })}
+      </script>
       <Sidebar activeId={activeId} onNav={handleNav} />
 
       <main className={styles.main}>
