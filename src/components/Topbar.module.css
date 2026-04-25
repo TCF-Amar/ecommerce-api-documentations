@@ -1,0 +1,46 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  background: rgba(8, 11, 16, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+}
+
+.title {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+}
+
+.badgeV,
+.badgeR {
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.badgeV {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.badgeR {
+  background: rgba(124, 58, 237, 0.1);
+  color: #a78bfa;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
