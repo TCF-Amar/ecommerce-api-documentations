@@ -39,16 +39,16 @@ export default function App() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "TechArticle",
-          "headline": "ShopAPI E-commerce REST API Documentation",
-          "description": "Comprehensive documentation for ShopAPI, a production-grade e-commerce backend API.",
+          "headline": "ShopAPI | Professional Fake Store API & E-commerce Documentation",
+          "description": "A free, production-ready Fake Store API for developers to build and test e-commerce applications.",
           "author": {
             "@type": "Organization",
             "name": "ShopAPI Team"
           },
           "about": [
-            { "@type": "Thing", "name": "Authentication" },
-            { "@type": "Thing", "name": "Product Management" },
-            { "@type": "Thing", "name": "Order Processing" }
+            { "@type": "Thing", "name": "Fake Store API" },
+            { "@type": "Thing", "name": "Mock E-commerce API" },
+            { "@type": "Thing", "name": "REST API Reference" }
           ]
         })}
       </script>
@@ -61,9 +61,9 @@ export default function App() {
 
           {/* HERO */}
           <div className={styles.hero} id="overview">
-            <div className={styles.heroTitle}>ShopAPI Docs</div>
+            <div className={styles.heroTitle}>ShopAPI: The Ultimate Fake Store API</div>
             <div className={styles.heroSub}>
-              Production-grade e-commerce backend — Node.js + TypeScript + PostgreSQL + Prisma + Redis + JWT.
+              A 100% free, production-grade mock e-commerce backend — Node.js + TypeScript + PostgreSQL + Prisma + Redis + JWT.
             </div>
             <div className={styles.stats}>
               <div><div className={styles.statNum}>38+</div><div className={styles.statLbl}>Endpoints</div></div>
