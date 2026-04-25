@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './App.module.css';
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
@@ -26,10 +26,12 @@ const ALL_SECTION_IDS = [
 ];
 
 export default function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeId, setActiveId] = useActiveSection(ALL_SECTION_IDS);
 
   const handleNav = (id) => {
     setActiveId(id);
+    setIsSidebarOpen(false); // Close drawer on mobile after selection
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
@@ -52,10 +54,15 @@ export default function App() {
           ]
         })}
       </script>
-      <Sidebar activeId={activeId} onNav={handleNav} />
+      <Sidebar
+        activeId={activeId}
+        onNav={handleNav}
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+      />
 
       <main className={styles.main}>
-        <Topbar />
+        <Topbar onMenuClick={() => setIsSidebarOpen(true)} />
 
         <div className={styles.content}>
 

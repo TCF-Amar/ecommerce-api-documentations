@@ -12,6 +12,27 @@
   z-index: 50;
 }
 
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.menuBtn:hover {
+  background: var(--border);
+}
+
 .title {
   font-family: var(--sans);
   font-size: 14px;
@@ -44,3 +65,15 @@
   color: #a78bfa;
   border: 1px solid rgba(124, 58, 237, 0.2);
 }
+
+@media (max-width: 1024px) {
+  .topbar {
+    padding: 0 16px;
+  }
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
