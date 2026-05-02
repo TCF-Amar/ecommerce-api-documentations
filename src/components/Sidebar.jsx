@@ -3,6 +3,7 @@ import styles from './Sidebar.module.css';
 import { NAV_SECTIONS } from '../data/endpoints';
 
 export default function Sidebar({ activeId, onNav, isOpen, onClose }) {
+
   return (
     <>
       <div className={`${styles.overlay} ${isOpen ? styles.overlayVisible : ''}`} onClick={onClose} />
@@ -17,7 +18,7 @@ export default function Sidebar({ activeId, onNav, isOpen, onClose }) {
 
         <div className={styles.baseUrl}>
           <span className={styles.dot} />
-          <span>https://backent-ecommerce-production.up.railway.app/api/v1</span>
+          <a href={process.env.REACT_APP_API_BASE_URL} target="_blank" rel="noopener noreferrer"  >{process.env.REACT_APP_API_BASE_URL}</a>
         </div>
 
         <nav className={styles.nav}>
